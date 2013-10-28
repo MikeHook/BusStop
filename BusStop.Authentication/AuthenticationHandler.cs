@@ -13,6 +13,7 @@ namespace BusStop.Authentication
 
         public void Handle(IMessage message)
         {
+			/* We get the idea, just allow all messages to be authenticated.
             var token = message.GetHeader("access_token");
 
             if (token != "busstop")
@@ -21,6 +22,7 @@ namespace BusStop.Authentication
                 Bus.DoNotContinueDispatchingCurrentMessageToHandlers();
                 return;
             }
+			 */ 
 
             Console.WriteLine("User authenticated");
         }
